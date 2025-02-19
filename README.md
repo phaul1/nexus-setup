@@ -117,7 +117,7 @@ nexus-cli --version
 
 If the command is not found, proceed to the manual installation.
 
-### **Option 2: Manual Installation of Nexus CLI**
+### **Alternatively**
 If the standard installation fails, manually download and install Nexus CLI.
 
 ```bash
@@ -173,6 +173,6 @@ You are now running a fresh and properly configured Nexus node.
 ---
 
 ## **Conclusion**
-This guide provides a complete reset and reinstall process to fix common issues with Nexus CLI and node setup. If you continue to experience problems, check the official Nexus documentation or community support for further troubleshooting.
+This helps completely reset and reinstall processes to fix common issues with Nexus CLI and node setup. If you continue to experience problems, check the official Nexus documentation or community support for further troubleshooting.
 
 ---
