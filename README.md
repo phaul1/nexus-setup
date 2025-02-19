@@ -45,9 +45,9 @@ Copy Node ID and Paste it in CLI when prompted
 
 ---
 
-⚙️ Method 2: Manual Setup
+## ⚙️ Method 2: Manual Setup
 
-## **Step 1: Remove All Nexus-Related Files and Configurations**
+**Step 1: Remove All Nexus-Related Files and Configurations**
 
 Before reinstalling, ensure all existing Nexus-related processes are stopped.
 
