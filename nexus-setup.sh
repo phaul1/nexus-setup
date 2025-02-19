@@ -16,6 +16,11 @@ rm -rf $HOME/.cargo/git/checkouts/stwo-*
 rm -rf $HOME/.rustup
 rm -rf $HOME/.cargo
 
+# Update system and install dependencies
+echo "Updating system and installing dependencies..."
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y screen curl libssl-dev pkg-config build-essential protobuf-compiler
+
 # Install Rust Properly
 echo "Installing Rust..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
