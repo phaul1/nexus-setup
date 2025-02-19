@@ -4,7 +4,6 @@ You earn NEX points based on your contributions
  
 ---
 
-method1: |
   ## ✅ Method 1: One-Line Automated Setup
   
   For a quick and seamless setup, run the following command in your terminal:
@@ -36,7 +35,5 @@ screen -r nexus
 ```
 
 ---
-
-method2: |
 
 ## ⚙️ Method 2: Manual Setup
