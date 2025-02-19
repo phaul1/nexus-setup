@@ -34,7 +34,8 @@ This command will:
 screen -r nexus
 ```
 
-To link to your Node to Nexus Account
+
+## To link to your Node to Nexus Account
 
 Create an account at app.nexus.xyz.
 
