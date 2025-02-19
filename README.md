@@ -15,14 +15,21 @@ method1: |
 
 This command will:
 
-Stop and remove existing Nexus processes
-Remove all previous configurations and dependencies
-Install Rust, Nexus CLI, and necessary dependencies properly
-Set up the Nexus node
-Start the node inside a screen session for stability
-Accept terms when prompted
-Choose option 2 and enter your Node ID when prompted
-To reconnect to the running node session, use:
+- Stop and remove existing Nexus processes
+
+- Remove all previous configurations and dependencies
+
+- Install Rust, Nexus CLI, and necessary dependencies properly
+
+- Set up the Nexus node
+
+- Start the node inside a screen session for stability
+
+- Accept terms when prompted
+
+- Choose option 2 and enter your Node ID when prompted
+
+- To reconnect to the running node session, use:
 
  ```bash
 screen -r nexus
