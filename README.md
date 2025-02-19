@@ -1,7 +1,7 @@
 title: "Setting Up a Nexus Node"
-overview: |
-  This guide provides two methods to set up a Nexus node from scratch.
-  
+
+You earn NEX points based on your contributions
+ 
 ---
 
 method1: |
