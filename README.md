@@ -34,3 +34,9 @@ This command will:
  ```bash
 screen -r nexus
 ```
+
+---
+
+method2: |
+
+⚙️ Method 2: Manual Setup
