@@ -39,4 +39,4 @@ screen -r nexus
 
 method2: |
 
-⚙️ Method 2: Manual Setup
+## ⚙️ Method 2: Manual Setup
