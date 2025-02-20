@@ -77,12 +77,13 @@ This ensures that any corrupted or outdated files are removed.
 
 ---
 
-## **Step 3: Reinstall Rust Properly**
+## **Step 3: Reinstall Rust Properly & Add riscv32i target**
 Now, install Rust properly to ensure compatibility with Nexus CLI.
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
+rustup target add riscv32i-unknown-none-elf
 rustup default nightly
 rustup component add rust-src --toolchain nightly
 ```
@@ -105,19 +106,13 @@ Try the standard installation first:
 
 ```bash
 curl -fsSL https://cli.nexus.xyz/ | sh
-export PATH=$HOME/.nexus/bin:$PATH
-source ~/.bashrc
 ```
 
-Check if Nexus CLI is installed correctly:
+If it is installed properly, you will be asked to accept their policy and provide your Node ID
 
-```bash
-nexus-cli --version
-```
+If this fails, proceed to the manual installation.
 
-If the command is not found, proceed to the manual installation.
-
-### **Alternatively**
+### **Alternatively: Option 2**
 If the standard installation fails, manually download and install Nexus CLI.
 
 ```bash
@@ -133,17 +128,13 @@ source ~/.bashrc
 Verify the installation:
 
 ```bash
-nexus-cli --version
+nexus-cli start
 ```
 
 ---
 
 ## **Step 5: Set Up Your Nexus Node**
-After installing Nexus CLI, set up your node.
-
-```bash
-nexus-cli node setup
-```
+After installing Nexus CLI, set up your node with your Node ID
 
 If you encounter the error **"Invalid setup option selected"**, try running:
 
@@ -152,21 +143,6 @@ nexus-cli node setup --manual
 ```
 
 Follow the on-screen instructions to complete the setup.
-
----
-
-## **Step 6: Verify and Start Your Node**
-Once the setup is complete, verify your node status:
-
-```bash
-nexus-cli node status
-```
-
-If everything is set up correctly, start your node:
-
-```bash
-nexus-cli node start
-```
 
 You are now running a fresh and properly configured Nexus node.
 
