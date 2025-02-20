@@ -33,6 +33,10 @@ echo "Verifying Rust installation..."
 rustc --version
 cargo --version
 
+# Add riscv32i-unknown-none-elf target
+echo "Adding riscv32i-unknown-none-elf target..."
+rustup target add riscv32i-unknown-none-elf
+
 # Install Nexus CLI
 echo "Installing Nexus CLI..."
 curl -fsSL https://cli.nexus.xyz/ | sh || {
