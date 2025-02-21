@@ -77,15 +77,30 @@ This ensures that any corrupted or outdated files are removed.
 
 ---
 
-## **Step 3: Reinstall Rust Properly & Add riscv32i target**
+## **Step 3: Install Updates and Dependencies**
+
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y screen curl libssl-dev pkg-config git build-essential protobuf-compiler
+wget https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protoc-21.12-linux-x86_64.zip
+ls -lh protoc-21.12-linux-x86_64.zip
+unzip protoc-21.12-linux-x86_64.zip -d $HOME/.local
+echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+```
+
+---
+
+## **Step 4: Reinstall Rust Properly & Add riscv32i target**
 Now, install Rust properly to ensure compatibility with Nexus CLI.
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
+rustup default stable
+rustup component add rust-src
 rustup target add riscv32i-unknown-none-elf
-rustup default nightly
-rustup component add rust-src --toolchain nightly
+
 ```
 
 Verify the installation:
@@ -99,9 +114,9 @@ This should output the installed versions of Rust and Cargo.
 
 ---
 
-## **Step 4: Install Nexus CLI and Dependencies**
+## **Step 5: Install Nexus CLI and Dependencies**
 
-### **Option 1: Standard Installation (May Fail Due to Errors)**
+### **Option 1: Standard Installation**
 Try the standard installation first:
 
 ```bash
@@ -133,7 +148,7 @@ nexus-cli start
 
 ---
 
-## **Step 5: Set Up Your Nexus Node**
+## **Step 6: Set Up Your Nexus Node**
 After installing Nexus CLI, set up your node with your Node ID
 
 If you encounter the error **"Invalid setup option selected"**, try running:
