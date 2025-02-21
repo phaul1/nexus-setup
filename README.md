@@ -81,7 +81,7 @@ This ensures that any corrupted or outdated files are removed.
 
 ```bash
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y screen curl libssl-dev pkg-config git build-essential protobuf-compiler
+sudo apt install -y screen curl libssl-dev pkg-config git build-essential
 wget https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protoc-21.12-linux-x86_64.zip
 ls -lh protoc-21.12-linux-x86_64.zip
 unzip protoc-21.12-linux-x86_64.zip -d $HOME/.local
