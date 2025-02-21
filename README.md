@@ -37,7 +37,7 @@ screen -r nexus
 
 ## To link to your Node to Nexus Account
 
-Create an account at app.nexus.xyz.
+Create an account at https://app.nexus.xyz.
 
 Click ``Node`` then click ``+ Add Node`` then click ``Add CLI Node``
 
