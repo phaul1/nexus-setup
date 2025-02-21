@@ -25,7 +25,7 @@ sudo apt install -y screen curl libssl-dev pkg-config git build-essential
 echo "Downloading and installing protoc v21.12..."
 wget https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protoc-21.12-linux-x86_64.zip
 ls -lh protoc-21.12-linux-x86_64.zip
-unzip protoc-21.12-linux-x86_64.zip -d $HOME/.local
+unzip -o protoc-21.12-linux-x86_64.zip -d $HOME/.local
 echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 
