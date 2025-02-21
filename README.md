@@ -1,4 +1,4 @@
-title: "Setting Up a Nexus Node"
+# **Setting Up a Nexus Node**
 
 You earn NEX points based on your contributions
 
