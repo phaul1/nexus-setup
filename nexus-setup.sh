@@ -42,7 +42,7 @@ echo "Verifying Rust installation..."
 rustc --version
 cargo --version
 
-# Start a screen session for Nexus CLI installation and node startup
+# Start a detached screen session named 'nexus' that will handle Nexus CLI installation and node startup
 echo "Starting a screen session 'nexus' for Nexus CLI installation and node startup..."
 screen -dmS nexus bash -c '
   echo "Installing Nexus CLI...";
