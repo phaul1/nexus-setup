@@ -31,30 +31,31 @@ This command will:
 
 - Remove all previous configurations and dependencies
 
-- Install Rust, Nexus CLI, and necessary dependencies properly
+- Install Rust, and necessary dependencies properly
 
-- Set up the Nexus node
+- Set up the Nexus node in a screen session 
 
-- Start the node inside a screen session for stability
+### **During installation you will be required to**
 
-- Accept terms when prompted
+- Accept Nexus terms when prompted
 
-- Choose option 2 and enter your Node ID when prompted
+- Choose between running your node anonymously ```option 1``` or linking a Node ID ```option 2``` and enter your Node ID when prompted
 
-- To reconnect to the running node session, use:
+- Its recomended you select ```option 2```
 
- ```bash
-screen -r nexus
-```
-
-
-## To link to your Node to Nexus Account
+### **To link to your Node to Nexus Account**
 
 Create an account at https://app.nexus.xyz.
 
 Click ``Node`` then click ``+ Add Node`` then click ``Add CLI Node``
 
 Copy Node ID and Paste it in CLI when prompted
+
+### **To reconnect to the running node session, use:**
+
+ ```bash
+screen -r nexus
+```
 
 ---
 
