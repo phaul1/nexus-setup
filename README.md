@@ -1,5 +1,9 @@
 # **Setting Up a Nexus Node**
 
+Nexus is pioneering the development of a decentralized supercomputer, aiming to power the "Verifiable Internet" by leveraging zero-knowledge (zk) technology
+
+More about Nexus here: https://x.com/Rub3d0/status/1891500373820535228
+
 You earn NEX points based on your contributions
 
 ---
