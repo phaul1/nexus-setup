@@ -42,34 +42,31 @@ echo "Verifying Rust installation..."
 rustc --version
 cargo --version
 
-# Start a detached screen session named 'nexus' that will handle Nexus CLI installation and node startup
-echo "Starting a screen session 'nexus' for Nexus CLI installation and node startup..."
-screen -R nexus -X quit 2>/dev/null  # Ensure no existing session is running
-screen -dmS nexus bash  # Start a new detached screen session
-screen -R nexus  # Attach to the screen session (so you're inside before installation starts)
+# Install Nexus CLI
+echo "Installing Nexus CLI..."
+if curl -fsSL https://cli.nexus.xyz/ | sh; then
+    echo "Standard installation succeeded."
+else
+    echo "Standard installation failed. Proceeding with manual installation..."
+    mkdir -p $HOME/.nexus/bin
+    cd $HOME/.nexus/bin
+    wget https://cli.nexus.xyz/latest/nexus-cli-linux-amd64 -O nexus-cli
+    chmod +x nexus-cli
+    export PATH=$HOME/.nexus/bin:$PATH
+    echo 'export PATH=$HOME/.nexus/bin:$PATH' >> ~/.bashrc
+    source ~/.bashrc
+fi
 
-# Now everything runs inside the screen session:
-screen -S nexus -X stuff $'echo "Installing Nexus CLI..."\n'
-screen -S nexus -X stuff $'if curl -fsSL https://cli.nexus.xyz/ | sh; then\n'
-screen -S nexus -X stuff $'  echo "Standard installation succeeded."\n'
-screen -S nexus -X stuff $'else\n'
-screen -S nexus -X stuff $'  echo "Standard installation failed. Proceeding with manual installation..."\n'
-screen -S nexus -X stuff $'  mkdir -p $HOME/.nexus/bin\n'
-screen -S nexus -X stuff $'  cd $HOME/.nexus/bin\n'
-screen -S nexus -X stuff $'  wget https://cli.nexus.xyz/latest/nexus-cli-linux-amd64 -O nexus-cli\n'
-screen -S nexus -X stuff $'  chmod +x nexus-cli\n'
-screen -S nexus -X stuff $'  export PATH=$HOME/.nexus/bin:$PATH\n'
-screen -S nexus -X stuff $'  echo "export PATH=$HOME/.nexus/bin:$PATH" >> ~/.bashrc\n'
-screen -S nexus -X stuff $'  source ~/.bashrc\n'
-screen -S nexus -X stuff $'fi\n'
-screen -S nexus -X stuff $'echo "Verifying Nexus CLI installation..."\n'
-screen -S nexus -X stuff $'nexus-cli --version\n'
-screen -S nexus -X stuff $'echo "Setting up Nexus node..."\n'
-screen -S nexus -X stuff $'nexus-cli node setup || nexus-cli node setup --manual\n'
-screen -S nexus -X stuff $'echo "Starting Nexus node..."\n'
-screen -S nexus -X stuff $'nexus-cli node start\n'
-screen -S nexus -X stuff $'exec bash\n'
-'
+# Verify Nexus CLI installation
+echo "Verifying Nexus CLI installation..."
+nexus-cli --version
 
-echo "Nexus node setup initiated in screen session 'nexus'."
-echo "To view the session, run: screen -r nexus"
+# Setup the Nexus Node
+echo "Setting up Nexus node..."
+nexus-cli node setup || nexus-cli node setup --manual
+
+# Start the Nexus Node
+echo "Starting Nexus node..."
+nexus-cli node start
+
+echo "Nexus node setup complete!"
