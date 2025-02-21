@@ -19,8 +19,15 @@ CPU CORES: 6 CORES
 
   ### ✅ Method 1: One-Line Automated Setup
   
-  For a quick and seamless setup, run the following command in your terminal:
-  
+  For a quick and seamless setup
+
+  First open a screen
+   ```bash
+screen -R nexus
+ ```
+
+Now that you are in the screen run the following command in your terminal:
+
   ```bash
   curl -fsSL https://raw.githubusercontent.com/phaul1/nexus-setup/refs/heads/main/nexus-setup.sh | bash
 ```
