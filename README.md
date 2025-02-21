@@ -4,9 +4,11 @@ You earn NEX points based on your contributions
 
 ---
 
-# **Minimum Requirements:
+## **Minimum Requirements:**
 RAM: 12GB
+
 ROM: 20GB
+
 CPU CORES: 6 CORES
 
 ---
